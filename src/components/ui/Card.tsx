@@ -1,80 +1,105 @@
-import * as React from 'react'
+import React, { forwardRef, HTMLAttributes } from 'react'
 
-import { cn } from '@/lib/utils'
+interface CardProps extends HTMLAttributes<HTMLDivElement> {
+	children?: React.ReactNode
+}
 
-const Card = React.forwardRef<
-	HTMLDivElement,
-	React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-	<div
-		ref={ref}
-		className={cn('rounded-lg bg-themeColorMain', className)}
-		{...props}
-	/>
-))
+const Card = forwardRef<HTMLDivElement, CardProps>(
+	({ children, className, ...props }, ref) => (
+		<div
+			ref={ref}
+			className={`card bg-themeColorMain rounded-lg p-3 ${className}`}
+			{...props}
+		>
+			{children}
+		</div>
+	)
+)
 Card.displayName = 'Card'
 
-const CardHeader = React.forwardRef<
-	HTMLDivElement,
-	React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-	<div
-		ref={ref}
-		className={cn('flex flex-col space-y-1.5 p-6', className)}
-		{...props}
-	/>
-))
+interface CardHeaderProps extends HTMLAttributes<HTMLDivElement> {
+	children?: React.ReactNode
+}
+
+const CardHeader = forwardRef<HTMLDivElement, CardHeaderProps>(
+	({ children, className, ...props }, ref) => (
+		<div
+			ref={ref}
+			className={`card-header textColor ${className}`}
+			{...props}
+		>
+			{children}
+		</div>
+	)
+)
 CardHeader.displayName = 'CardHeader'
 
-const CardTitle = React.forwardRef<
-	HTMLParagraphElement,
-	React.HTMLAttributes<HTMLHeadingElement>
->(({ className, ...props }, ref) => (
-	<h3
-		ref={ref}
-		className={cn(
-			'text-2xl font-semibold leading-none tracking-tight',
-			className
-		)}
-		{...props}
-	/>
-))
+interface CardTitleProps extends HTMLAttributes<HTMLHeadingElement> {
+	children?: React.ReactNode
+}
+
+const CardTitle = forwardRef<HTMLHeadingElement, CardTitleProps>(
+	({ children, className, ...props }, ref) => (
+		<h3
+			ref={ref}
+			className={`card-title textColor ${className}`}
+			{...props}
+		>
+			{children}
+		</h3>
+	)
+)
 CardTitle.displayName = 'CardTitle'
 
-const CardDescription = React.forwardRef<
-	HTMLParagraphElement,
-	React.HTMLAttributes<HTMLParagraphElement>
->(({ className, ...props }, ref) => (
-	<p
-		ref={ref}
-		className={cn('text-sm text-gray-500 dark:text-gray-400', className)}
-		{...props}
-	/>
-))
+interface CardDescriptionProps extends HTMLAttributes<HTMLParagraphElement> {
+	children?: React.ReactNode
+}
+
+const CardDescription = forwardRef<HTMLParagraphElement, CardDescriptionProps>(
+	({ children, className, ...props }, ref) => (
+		<p
+			ref={ref}
+			className={`card-description textColor ${className}`}
+			{...props}
+		>
+			{children}
+		</p>
+	)
+)
 CardDescription.displayName = 'CardDescription'
 
-const CardContent = React.forwardRef<
-	HTMLDivElement,
-	React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-	<div
-		ref={ref}
-		className={cn('p-6 pt-0', className)}
-		{...props}
-	/>
-))
+interface CardContentProps extends HTMLAttributes<HTMLDivElement> {
+	children?: React.ReactNode
+}
+
+const CardContent = forwardRef<HTMLDivElement, CardContentProps>(
+	({ children, className, ...props }, ref) => (
+		<div
+			ref={ref}
+			className={`card-content ${className}`}
+			{...props}
+		>
+			{children}
+		</div>
+	)
+)
 CardContent.displayName = 'CardContent'
 
-const CardFooter = React.forwardRef<
-	HTMLDivElement,
-	React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-	<div
-		ref={ref}
-		className={cn('flex items-center p-6 pt-0', className)}
-		{...props}
-	/>
-))
+interface CardFooterProps extends HTMLAttributes<HTMLDivElement> {
+	children?: React.ReactNode
+}
+
+const CardFooter = forwardRef<HTMLDivElement, CardFooterProps>(
+	({ children, className, ...props }, ref) => (
+		<div
+			ref={ref}
+			className={`card-footer textColor ${className}`}
+			{...props}
+		>
+			{children}
+		</div>
+	)
+)
 CardFooter.displayName = 'CardFooter'
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }

@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
 	content: [
@@ -8,9 +8,6 @@ const config: Config = {
 	],
 	theme: {
 		screens: {
-			// sm: { max: '800px' },
-			// md: { min: '801px', max: '1400px' },
-			// lg: { min: '1401px' }
 			sm: { max: '800px' },
 			md: { min: '801px', max: '1200px' },
 			lg: { min: '1201px' }
@@ -39,6 +36,59 @@ const config: Config = {
 			'6xl': '4rem',
 			'7xl': '5rem'
 		},
+		colors: {
+			themeColorMain: '#5A75CE',
+			themeColorSecondary: '#CEB35A',
+			textColor: '#EBE0BC',
+			menuDashboard: '#1F6AF6',
+			menuProfile: '#5F40B0',
+			menuLessons: '#F29848',
+			menuNotes: '#63D480',
+			menuKB: '#EC394A',
+			menuBlog: '#089DB0',
+			menuLiveLesson: 'rgba(255, 0, 0, 0.25)',
+			lessonList: 'rgba(255, 172, 49, 0.25)',
+			indepthColor: '#1f6af6',
+			lessonFontColor: '#20325e',
+			totalHours: '#6097E9',
+			totalHoursIcon: 'rgba(31, 106, 246, 1)',
+			completedLessons: '#D2EF79',
+			completedLessonsIcon: 'rgba(95, 64, 176, 1)',
+			lessonsInProgress: '#F5CFD2',
+			lessonsInProgressIcon: 'rgba(99, 212, 128, 1)',
+			avgQuiz: 'rgba(242, 152, 72, 0.5)',
+			avgQuizIcon: 'rgba(242, 152, 72, 1)',
+			avgQuizScore: '#E95640',
+			mainColor404: '#495B7A',
+			menuInmail: '#FCEE21',
+			compBgDark: '#2b3143',
+			appBgDark: '#1c2234',
+			auth: '#D9DADD',
+			applicationsBg: 'rgba(99,212,128,0.2)',
+			menuApplications: '#00A99D',
+			digilibWelcome: 'rgba(31, 106, 246, 0.2)',
+			digilibWelcomeFont: '#22273B',
+			digilibWelcomeButton: '#1F6AF6',
+			agriSci: '#53A14F',
+			artSocialSci: '#EB973E',
+			ecoSci: '#88C9D2',
+			education: '#26418A',
+			engineering: '#F4BB59',
+			law: '#D04035',
+			medHealthSci: '#276472',
+			milSci: '#E57767',
+			science: '#B83535',
+			theology: '#57338C',
+			ems: '#6C8EA3',
+			meritSpecial: '#DCA70C',
+			bursariesFaculty: '#309549',
+			menuBursary: '#add844',
+			textColorSecondary: '#000000',
+			appBg: '#121212',
+			compBg: '#181818',
+			navbarBg: '#000000',
+			welcomeCard: '#EC5640'
+		},
 		extend: {
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -46,59 +96,6 @@ const config: Config = {
 					'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
 			}
 		}
-	},
-	colors: {
-		themeColorMain: '#5A75CE',
-		themeColorSecondary: '#CEB35A',
-		textColor: '#EBE0BC',
-		menuDashboard: '#1F6AF6',
-		menuProfile: '#5F40B0',
-		menuLessons: '#F29848',
-		menuNotes: '#63D480',
-		menuKB: '#EC394A',
-		menuBlog: '#089DB0',
-		menuLiveLesson: 'rgba(255, 0, 0, 0.25)',
-		lessonList: 'rgba(255, 172, 49, 0.25)',
-		indepthColor: '#1f6af6',
-		lessonFontColor: '#20325e',
-		totalHours: '#6097E9',
-		totalHoursIcon: 'rgba(31, 106, 246, 1)',
-		completedLessons: '#D2EF79',
-		completedLessonsIcon: 'rgba(95, 64, 176, 1)',
-		lessonsInProgress: '#F5CFD2',
-		lessonsInProgressIcon: 'rgba(99, 212, 128, 1)',
-		avgQuiz: 'rgba(242, 152, 72, 0.5)',
-		avgQuizIcon: 'rgba(242, 152, 72, 1)',
-		avgQuizScore: '#E95640',
-		mainColor404: '#495B7A',
-		menuInmail: '#FCEE21',
-		compBgDark: '#2b3143',
-		appBgDark: '#1c2234',
-		auth: '#D9DADD',
-		applicationsBg: 'rgba(99,212,128,0.2)',
-		menuApplications: '#00A99D',
-		digilibWelcome: 'rgba(31, 106, 246, 0.2)',
-		digilibWelcomeFont: '#22273B',
-		digilibWelcomeButton: '#1F6AF6',
-		agriSci: '#53A14F',
-		artSocialSci: '#EB973E',
-		ecoSci: '#88C9D2',
-		education: '#26418A',
-		engineering: '#F4BB59',
-		law: '#D04035',
-		medHealthSci: '#276472',
-		milSci: '#E57767',
-		science: '#B83535',
-		theology: '#57338C',
-		ems: '#6C8EA3',
-		meritSpecial: '#DCA70C',
-		bursariesFaculty: '#309549',
-		menuBursary: '#add844',
-		textColorSecondary: '#000000',
-		appBg: '#121212',
-		compBg: '#181818',
-		navbarBg: '#000000',
-		welcomeCard: '#EC5640'
 	},
 	keyframes: {
 		'fade-in-down': {
@@ -151,12 +148,11 @@ const config: Config = {
 			'animate-pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) o',
 			'animate-bounce': 'bounce 1s infinite'
 		}
-	}
+	},
+	variants: {
+		extend: {}
+	},
+	plugins: []
 }
-variants: {
-	extend: {
-	}
-}
-plugins: []
 
-export default config
+export default config;

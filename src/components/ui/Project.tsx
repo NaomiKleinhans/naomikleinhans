@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { CardTitle, CardHeader, CardContent, Card } from '@/components/ui/Card'
+import { Card, CardContent, CardHeader, CardTitle } from './Card'
 
 const Project = () => {
 	const containerRef = useRef<HTMLDivElement>(null)

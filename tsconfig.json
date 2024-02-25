@@ -22,7 +22,6 @@
 		],
 		"paths": {
 			"@/*": ["./*"],
-			"@clerk/nextjs": ["node_modules/@clerk/nextjs"]
 		}
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

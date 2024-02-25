@@ -99,12 +99,12 @@ const Home = () => {
 			key='1'
 			className='flex flex-col bg-[#181818] overflow-y-hidden'
 		>
-			<div className='sm:hidden z-50'>
+			
 				<MainNav />
-			</div>
-			<div className='md:hidden lg:hidden z-50'>
+		
+		
 				<MobileMainNav />
-			</div>
+		
 
 			<main>
 				{canScrollLeft ? (
@@ -146,7 +146,9 @@ const Home = () => {
 								style={{
 									display: 'flex',
 									justifyContent: 'center',
-									alignItems: 'center'
+									alignItems: 'center',
+									height: '30vh',
+									width: 'auto'
 								}}
 							>
 								<div
@@ -171,7 +173,8 @@ const Home = () => {
 									display: 'flex',
 									justifyContent: 'center',
 									alignItems: 'center',
-									height: '30vh'
+									height: '30vh',
+									width: 'auto'
 								}}
 							>
 								<div

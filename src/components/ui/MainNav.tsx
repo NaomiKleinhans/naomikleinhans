@@ -12,10 +12,10 @@ const MainNav = () => {
 	}
 
 	return (
-		<header className='fixed w-full px-4 lg:px-6 h-20 flex justify-between space-x-4 bg-[#000] text-textColor'>
+		<header className='fixed w-full px-4 lg:px-6 h-20 flex justify-between space-x-4 bg-[#000] text-textColor sm:hidden z-50'>
 			<div onClick={() => handleSectionClick('home')}>
 				<Link href='#home'>
-					<div className='flex items-center justify-start'>
+					<div className='flex items-center justify-start mt-4'>
 						<div>
 							<Image
 								src='/logo.png'

@@ -49,9 +49,9 @@ const Project = () => {
 					</CardContent>
 				</Card>
 			</div>
-				<div className='text-center text-textColor mt-20'>
-					If my projects catch your eye, reach out! Let us collaborate.
-				</div>
+			<div className='text-center text-textColor mt-20'>
+				If my projects catch your eye, reach out! Let us collaborate.
+			</div>
 		</div>
 	)
 }

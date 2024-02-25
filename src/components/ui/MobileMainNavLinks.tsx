@@ -2,18 +2,15 @@ import Link from 'next/link'
 import { useState } from 'react'
 type Section = 'home' | 'projects' | 'about' | 'contact'
 
- 
-
-
 const MobileMainNavLinks = () => {
 	const [projectsClicked, setProjectsClicked] = useState(false)
-const [activeSection, setActiveSection] = useState<Section | null>(null)
+	const [activeSection, setActiveSection] = useState<Section | null>(null)
 	const handleProjectsClick = () => {
 		setProjectsClicked(true)
 	}
- const handleSectionClick = (section: Section) => {
+	const handleSectionClick = (section: Section) => {
 		setActiveSection(section)
- }
+	}
 	return (
 		<>
 			<nav className='fixed p-4 right-0 flex flex-col rounded-lg bg-[#101010] space-y-10 px-10 my-1 mx-2'>

@@ -7,23 +7,22 @@ import { CloseXIcon } from '../SvgIcons/CloseXIcon'
 type Section = 'home' | 'projects' | 'about' | 'contact'
 const MobileMainNav = () => {
 	const [isMenuOpen, setMenuOpen] = useState(false)
-const [activeSection, setActiveSection] = useState<Section | null>(null)
+	const [activeSection, setActiveSection] = useState<Section | null>(null)
 	const toggleMenu = () => {
 		setMenuOpen(!isMenuOpen)
 	}
- const handleSectionClick = (section: Section) => {
+	const handleSectionClick = (section: Section) => {
 		setActiveSection(section)
- }
+	}
 	return (
 		<>
-			<header className='fixed md:hidden lg:hidden w-full px-4 h-20 bg-[#000] text-textColor'>
+			<header className='fixed w-full px-4 h-20 bg-[#000] text-textColor md:hidden lg:hidden z-50'>
 				<div className='flex items-center justify-between mt-3'>
 					<Link
 						className='p-2'
 						href='#home'
-				onClick={() => handleSectionClick('home')}
-			>
-
+						onClick={() => handleSectionClick('home')}
+					>
 						<div>
 							<Image
 								src='/logo.png'

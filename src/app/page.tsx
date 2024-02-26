@@ -114,10 +114,10 @@ const Home = () => {
                         <h1 className='mt-24 sm:mb-8 lg:text-5xl md:text-4xl text-center mx-4 sm:text-3xl font-bold text-themeColorMain'>
                             Welcome to my Portfolio
                         </h1>
-                        <p className='text-center text-textColor lg:text-2xl md:text-xl sm:text-md mx-4'>
+                        <div className='text-center text-textColor lg:text-2xl md:text-xl sm:text-md mx-4'>
                             I am a frontend developer with a passion for creating beautiful
                             and functional web applications.
-                        </p>
+                        </div>
                         <div className='sm:hidden'>
                             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '30vh', width: 'auto' }}>
                                 <div style={{ border: '6px solid #5A75CE', borderRadius: '50%', overflow: 'hidden' }}>
@@ -151,9 +151,9 @@ const Home = () => {
                 </div>
             </main>
             <footer className='flex flex-col sm:flex-row w-full shrink-0 items-center px-4 md:px-6 border-t border-themeColorMain sm:py-2 py-1.5 bg-[#181818]'>
-                <p className='text-white text-center md:text-left'>
+                <div className='text-white text-center md:text-left'>
                     © 2024 Frontend Developer. All rights reserved.
-                </p>
+                </div>
                 <nav className='ml-auto flex gap-4 text-white'>
                     <Link href='#'>
                         <span className='hover:underline cursor-pointer'>Terms of Service</span>

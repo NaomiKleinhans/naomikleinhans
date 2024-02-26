@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from './Card'
+import Card from './Card'
+
 
 const Project = () => {
 	const containerRef = useRef<HTMLDivElement>(null)
@@ -22,32 +23,18 @@ const Project = () => {
 				</div>
 			</div>
 			<div className='grid items-center gap-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3 text-black'>
-				<Card>
-					<CardHeader>
-						<CardTitle className='text-black'>Project 1</CardTitle>
-					</CardHeader>
-					<CardContent>
-						<p className='text-sm text-black'>
-							A description of the first project.
-						</p>
-					</CardContent>
-				</Card>
-				<Card>
-					<CardHeader>
-						<CardTitle>Project 2</CardTitle>
-					</CardHeader>
-					<CardContent>
-						<p className='text-sm'>A description of the second project.</p>
-					</CardContent>
-				</Card>
-				<Card>
-					<CardHeader>
-						<CardTitle>Project 3</CardTitle>
-					</CardHeader>
-					<CardContent>
-						<p className='text-sm'>A description of the third project.</p>
-					</CardContent>
-				</Card>
+				<Card
+					title='Project 1'
+					description='	A description of the first project.'
+				></Card>
+				<Card
+					title='Project 1'
+					description='	A description of the first project.'
+				></Card>
+				<Card
+					title='Project 1'
+					description='	A description of the first project.'
+				></Card>
 			</div>
 			<div className='text-center text-textColor mt-20'>
 				If my projects catch your eye, reach out! Let us collaborate.

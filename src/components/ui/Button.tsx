@@ -18,7 +18,7 @@ export const Button: React.FC<ButtonProps> = ({
 			onClick={onClick}
 			style={style}
 		>
-			{label ?? children ?? 'X'}
+			{label ?? 'X'}
 		</button>
 	)
 }

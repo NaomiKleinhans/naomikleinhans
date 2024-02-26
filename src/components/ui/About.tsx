@@ -18,7 +18,7 @@ const About = () => {
 					<h2 className='lg:text-5xl md:text-4xl text-center mx-4 sm:text-3xl font-bold mb-24 text-themeColorMain'>
 						About Me
 					</h2>
-					<p className='text-center text-textColor lg:text-xl md:text-lg sm:text-sm mx-4'>
+					<div className='text-center text-textColor lg:text-xl md:text-lg sm:text-sm mx-4'>
 						Greetings! I am a front-end developer with expertise in crafting
 						captivating digital experiences using technologies like HTML, CSS,
 						and JavaScript, especially within the Next.js framework. With
@@ -31,7 +31,7 @@ const About = () => {
 						for visiting my portfolio! I am excited about the possibility of
 						collaborating to bring innovative ideas to life. Let us team up and
 						create something extraordinary together!
-					</p>
+					</div>
 				</div>
 			</div>
 			<div className='grid items-center gap-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3 text-black'></div>

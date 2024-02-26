@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react'
 import { Input } from './Input'
 import { Textarea } from './Textarea'
 import { Button } from './Button'
-import Label from './Label'
 
 const Contact = () => {
 	const containerRef = useRef<HTMLDivElement>(null)
@@ -26,10 +25,10 @@ const Contact = () => {
 			.value
 
 		const subject = `Contact Form Submission from ${firstName} ${lastName}`
-		const body = `Email: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`
+		const body = `Message: ${message}`
 
 		window.open(
-			`mailto:maartensnaomi@gmail.com?subject=${encodeURIComponent(
+			`mailto:naomikleinhans56@gmail.com?subject=${encodeURIComponent(
 				subject
 			)}&body=${encodeURIComponent(body)}`
 		)
@@ -50,34 +49,34 @@ const Contact = () => {
 			<div className='space-y-4 text-textColor'>
 				<div className='grid grid-cols-2 gap-4 '>
 					<div className='space-y-2'>
-						<Label htmlFor='first-name'>First name</Label>
 						<Input
 							id='first-name'
 							placeholder='Enter your first name'
+							inputLabel='First name'
 						/>
 					</div>
 					<div className='space-y-2'>
-						<Label htmlFor='last-name'>Last name</Label>
 						<Input
 							id='last-name'
 							placeholder='Enter your last name'
+							inputLabel='Last name'
 						/>
 					</div>
 				</div>
 				<div className='space-y-2'>
-					<Label htmlFor='email'>Email</Label>
 					<Input
 						id='email'
 						placeholder='Enter your email'
 						type='email'
+						inputLabel='Email'
 					/>
 				</div>
 				<div className='space-y-2'>
-					<Label htmlFor='message'>Message</Label>
 					<Textarea
-						className='min-h-[100px]'
 						id='message'
 						placeholder='Enter your message'
+						rows={6}
+						textAreaLabel='Message'
 					/>
 				</div>
 				<div>

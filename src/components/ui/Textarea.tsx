@@ -1,25 +1,37 @@
 import * as React from 'react'
 
-import { cn } from '@/lib/utils'
-
 export interface TextareaProps
-	extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
+	extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+	placeholder?: string
+	textAreaLabel?: string
+}
 
-const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
-	({ className, ...props }, ref) => {
-		return (
-			<textarea
-				className={cn(
-					'flex min-h-[80px] w-full rounded-md border border-gray-200 bg-compBg px-3 py-2 text-sm ring-offset-white placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-950 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:ring-offset-gray-950 dark:placeholder:text-gray-400 dark:focus-visible:ring-gray-300',
-					className
-				)}
-				ref={ref}
-				{...props}
-			/>
-		)
-	}
-)
-
-Textarea.displayName = 'Textarea'
+const Textarea: React.FC<TextareaProps> = ({
+	placeholder = 'Enter your message',
+	textAreaLabel = '',
+	...rest
+}) => {
+	return (
+		<div>
+			<label
+				htmlFor={rest.id || 'comment'} // Use rest.id if provided, else fallback to 'comment'
+				className='block text-sm font-medium leading-6 text-gray-900'
+			>
+				{textAreaLabel}
+			</label>
+			<div className='mt-2'>
+				<textarea
+					placeholder={placeholder}
+					rows={rest.rows || 4} // Use rest.rows if provided, else fallback to 4
+					name={rest.name || 'comment'} // Use rest.name if provided, else fallback to 'comment'
+					id={rest.id || 'comment'} // Use rest.id if provided, else fallback to 'comment'
+					className='block min-h-[100px] w-full rounded-md border-0 p-3 bg-compBg text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
+					defaultValue={''}
+					{...rest}
+				/>
+			</div>
+		</div>
+	)
+}
 
 export { Textarea }

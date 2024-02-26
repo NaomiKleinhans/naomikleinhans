@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { HamburgerIcon } from '../SvgIcons/HamburgerIcon'
 import MobileMainNavLinks from './MobileMainNavLinks'
 import { CloseXIcon } from '../SvgIcons/CloseXIcon'
+import Link from 'next/link'
 
 type Section = 'home' | 'projects' | 'about' | 'contact'
 
-const MobileMainNav = () => {
+const MobileMainNav: React.FC = () => {
 	const [isMenuOpen, setMenuOpen] = useState(false)
 	const [activeSection, setActiveSection] = useState<Section | null>(null)
 
@@ -22,7 +22,7 @@ const MobileMainNav = () => {
 	return (
 		<header className='fixed w-full px-4 h-20 bg-[#000] text-textColor md:hidden lg:hidden z-50'>
 			<div className='flex items-center justify-between mt-3'>
-				<a
+				<Link
 					className='p-2'
 					href='#home'
 					onClick={() => handleSectionClick('home')}
@@ -35,7 +35,7 @@ const MobileMainNav = () => {
 							height='200'
 						/>
 					</div>
-				</a>
+				</Link>
 				<button
 					className='p-2 focus:outline-none'
 					onClick={toggleMenu}

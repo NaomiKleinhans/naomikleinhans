@@ -18,7 +18,7 @@ const MobileMainNavLinks = () => {
 	return (
 		<>
 			<nav className='fixed p-4 right-0 flex flex-col rounded-lg bg-[#101010] space-y-10 px-10 my-1 mx-2'>
-				<Link href='#featured-projects'>
+				<a href='#featured-projects'>
 					<div
 						className={`text-xl font-medium ${
 							activeSection === 'projects' ? 'underline' : ''
@@ -27,8 +27,8 @@ const MobileMainNavLinks = () => {
 					>
 						Projects
 					</div>
-				</Link>
-				<Link href='#about'>
+				</a>
+				<a href='#about'>
 					<div
 						className={`text-xl font-medium ${
 							activeSection === 'about' ? 'underline' : ''
@@ -37,8 +37,8 @@ const MobileMainNavLinks = () => {
 					>
 						About
 					</div>
-				</Link>
-				<Link href='#contact'>
+				</a>
+				<a href='#contact'>
 					<div
 						className={`text-xl font-medium ${
 							activeSection === 'contact' ? 'underline' : ''
@@ -47,7 +47,7 @@ const MobileMainNavLinks = () => {
 					>
 						Contact
 					</div>
-				</Link>
+				</a>
 			</nav>
 		</>
 	)

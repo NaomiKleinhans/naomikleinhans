@@ -22,7 +22,7 @@ const MobileMainNav = () => {
 	return (
 		<header className='fixed w-full px-4 h-20 bg-[#000] text-textColor md:hidden lg:hidden z-50'>
 			<div className='flex items-center justify-between mt-3'>
-				<Link
+				<a
 					className='p-2'
 					href='#home'
 					onClick={() => handleSectionClick('home')}
@@ -35,7 +35,7 @@ const MobileMainNav = () => {
 							height='200'
 						/>
 					</div>
-				</Link>
+				</a>
 				<button
 					className='p-2 focus:outline-none'
 					onClick={toggleMenu}

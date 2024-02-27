@@ -9,6 +9,7 @@ import Contact from '../components/ui/Contact'
 import Project from '../components/ui/Project'
 import About from '../components/ui/About'
 import Link from 'next/link'
+import ComingSoonPage from '../components/ui/ComingSoon'
 
 const Home = () => {
 	const [canScrollLeft, setCanScrollLeft] = useState(false)
@@ -192,7 +193,8 @@ const Home = () => {
 						className='min-w-full flex justify-center '
 						id='projects'
 					>
-						<Project />
+						{/* <Project /> */}
+						<ComingSoonPage/>
 					</section>
 					<section
 						className='min-w-full flex justify-center '

@@ -46,16 +46,16 @@ const Contact = () => {
 					</h2>
 				</div>
 			</div>
-			<div className='text-textColor'>
+			<div className='text-textColor sm:space-y-2 md:space-y-3 lg:space-y-4'>
 				<div className='sm:hidden grid grid-cols-2 gap-4 '>
-					<div className='space-y-2'>
+					<div className='sm:space-y-2 md:space-y-3 lg:space-y-4'>
 						<Input
 							id='first-name'
 							placeholder='Enter your first name'
 							// inputLabel='First name'
 						/>
 					</div>
-					<div className='space-y-2'>
+					<div className='sm:space-y-2 md:space-y-3 lg:space-y-4'>
 						<Input
 							id='last-name'
 							placeholder='Enter your last name'
@@ -64,21 +64,21 @@ const Contact = () => {
 					</div>
 				</div>
 
-				<div className='space-y-2 lg:hidden md:hidden'>
+				<div className='sm:space-y-2 md:space-y-3 lg:space-y-4 lg:hidden md:hidden'>
 					<Input
 						id='first-name'
 						placeholder='Enter your first name'
 						// inputLabel='First name'
 					/>
 				</div>
-				<div className='space-y-2'>
+				<div className='sm:space-y-2 md:space-y-3 lg:space-y-4'>
 					<Input
 						id='last-name'
 						placeholder='Enter your last name'
 						// inputLabel='Last name'
 					/>
 				</div>
-				<div className='space-y-2'>
+				<div className='sm:space-y-2 md:space-y-3 lg:space-y-4'>
 					<Input
 						id='email'
 						placeholder='Enter your email'
@@ -86,7 +86,7 @@ const Contact = () => {
 						// inputLabel='Email'
 					/>
 				</div>
-				<div className='space-y-2'>
+				<div className='sm:space-y-2 md:space-y-3 lg:space-y-4'>
 					<Textarea
 						id='message'
 						placeholder='Enter your message'

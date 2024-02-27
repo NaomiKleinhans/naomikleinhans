@@ -36,17 +36,17 @@ const Contact = () => {
 
 	return (
 		<div
-			className='container mt-24 px-4 md:px-6'
+			className='container mt-24 px-4 md:px-6 md:mx-10 lg:mx-10'
 			ref={containerRef}
 		>
-			<div className='flex flex-col items-center justify-center space-y-4 text-center'>
+			<div className='flex flex-col items-center justify-center text-center'>
 				<div className='space-y-2'>
-					<h2 className='lg:text-5xl md:text-4xl text-center mx-4 sm:text-4xl font-bold mb-2 text-themeColorMain'>
+					<h2 className='lg:text-6xl md:text-4xl text-center mx-4 sm:text-4xl font-bold sm:mb-2  text-themeColorMain'>
 						Contact Me
 					</h2>
 				</div>
 			</div>
-			<div className='space-y-4 text-textColor'>
+			<div className='text-textColor'>
 				<div className='sm:hidden grid grid-cols-2 gap-4 '>
 					<div className='space-y-2'>
 						<Input
@@ -63,21 +63,21 @@ const Contact = () => {
 						/>
 					</div>
 				</div>
-				
-					<div className='space-y-2 lg:hidden md:hidden'>
-						<Input
-							id='first-name'
-							placeholder='Enter your first name'
-							// inputLabel='First name'
-						/>
-					</div>
-					<div className='space-y-2'>
-						<Input
-							id='last-name'
-							placeholder='Enter your last name'
-							// inputLabel='Last name'
-						/>
-					</div>
+
+				<div className='space-y-2 lg:hidden md:hidden'>
+					<Input
+						id='first-name'
+						placeholder='Enter your first name'
+						// inputLabel='First name'
+					/>
+				</div>
+				<div className='space-y-2'>
+					<Input
+						id='last-name'
+						placeholder='Enter your last name'
+						// inputLabel='Last name'
+					/>
+				</div>
 				<div className='space-y-2'>
 					<Input
 						id='email'
@@ -94,14 +94,9 @@ const Contact = () => {
 						// textAreaLabel='Message'
 					/>
 				</div>
-				<div>
+				<div className='mt-4'>
 					<Button
 						label='Send Message'
-						style={{
-							backgroundColor: '#5A75CE',
-							padding: '10px 20px',
-							borderRadius: '10px'
-						}}
 						onClick={handleSendEmail}
 					/>
 				</div>

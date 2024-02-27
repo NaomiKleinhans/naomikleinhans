@@ -144,6 +144,7 @@ const Home = () => {
 									<Image
 										src='/profile-pic.png'
 										alt='Profile Picture'
+										className='transition transform hover:scale-125 focus:scale-125 cursor-pointer'
 										width='250'
 										height='250'
 									/>
@@ -170,6 +171,7 @@ const Home = () => {
 									<Image
 										src='/profile-pic.png'
 										alt='Profile Picture'
+										className='transition transform hover:scale-125 focus:scale-125 cursor-pointer'
 										width='200'
 										height='200'
 									/>

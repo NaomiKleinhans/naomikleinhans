@@ -16,7 +16,12 @@ export const Button: React.FC<ButtonProps> = ({
 	return (
 		<button
 			onClick={onClick}
-			style={style}
+			style={{
+				backgroundColor: '#5A75CE',
+				color: 'black',
+							padding: '10px 20px',
+							borderRadius: '10px'
+						}}
 		>
 			{label ?? 'X'}
 		</button>

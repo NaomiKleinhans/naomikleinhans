@@ -20,7 +20,7 @@ const MobileMainNav: React.FC = () => {
 	}
 
 	return (
-		<header className='fixed w-full px-4 h-20 bg-[#000] text-textColor md:hidden lg:hidden z-50'>
+		<header className='fixed w-full px-4 h-20 bg-[#121212] text-textColor md:hidden lg:hidden z-50'>
 			<div className='flex items-center justify-between mt-3'>
 				<Link
 					className='p-2'

@@ -8,17 +8,17 @@ export interface TextareaProps
 
 const Textarea: React.FC<TextareaProps> = ({
 	placeholder = 'Enter your message',
-	textAreaLabel = '',
+	// textAreaLabel = '',
 	...rest
 }) => {
 	return (
 		<div>
-			<label
+			{/* <label
 				htmlFor={rest.id || 'comment'} // Use rest.id if provided, else fallback to 'comment'
 				className='block text-sm font-medium leading-6 text-gray-900'
 			>
 				{textAreaLabel}
-			</label>
+			</label> */}
 			<div className='mt-2'>
 				<textarea
 					placeholder={placeholder}

@@ -3,18 +3,18 @@ import * as React from 'react'
 export interface InputProps
 	extends React.InputHTMLAttributes<HTMLInputElement> {
 	placeholder: string
-	inputLabel: string
+	// inputLabel: string
 }
 
-const Input: React.FC<InputProps> = ({ placeholder, inputLabel, ...rest }) => {
+const Input: React.FC<InputProps> = ({ placeholder, ...rest }) => {
 	return (
 		<div>
-			<label
+			{/* <label
 				htmlFor='comment'
 				className='block text-sm font-medium leading-6 text-gray-900'
 			>
 				{inputLabel}
-			</label>
+			</label> */}
 			<div className='mt-2 '>
 				<input
 					placeholder={placeholder}

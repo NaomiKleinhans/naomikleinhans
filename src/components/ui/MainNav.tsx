@@ -13,7 +13,7 @@ const MainNav: React.FC<MainNavProps> = ({ activeSection, onSectionClick }) => {
 	}
 
 	return (
-		<header className='fixed w-full px-4 lg:px-6 h-20 flex justify-between space-x-4 bg-[#000] text-textColor sm:hidden z-50'>
+		<header className='fixed w-full px-4 lg:px-6 h-20 flex justify-between space-x-4 bg-[#121212] border-b border-themeColorMain text-textColor sm:hidden z-50'>
 			<div onClick={() => handleSectionClick('home')}>
 				<Link
 					href='#home'

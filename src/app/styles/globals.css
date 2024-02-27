@@ -9,7 +9,7 @@ body {
 	font-family: 'Helvetica', OpenSans, sans-serif;
 	background-color: #181818;
 	touch-action: pan-x pan-y;
-}
+	  }
 
 main {
 	overflow: hidden;
@@ -34,7 +34,7 @@ main {
 }
 @media screen and (min-width: 0px) and (max-width: 400px) {
 	.h-content {
-		height: 97vh;
+		height: 95vh;
 	}
 }
 @media screen and (min-width: 401px) and (max-width: 800px) {

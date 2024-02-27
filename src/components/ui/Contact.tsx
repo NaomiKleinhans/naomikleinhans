@@ -41,34 +41,49 @@ const Contact = () => {
 		>
 			<div className='flex flex-col items-center justify-center space-y-4 text-center'>
 				<div className='space-y-2'>
-					<h2 className='lg:text-5xl md:text-4xl text-center mx-4 sm:text-3xl font-bold mb-24 text-themeColorMain'>
+					<h2 className='lg:text-5xl md:text-4xl text-center mx-4 sm:text-4xl font-bold mb-2 text-themeColorMain'>
 						Contact Me
 					</h2>
 				</div>
 			</div>
 			<div className='space-y-4 text-textColor'>
-				<div className='grid grid-cols-2 gap-4 '>
+				<div className='sm:hidden grid grid-cols-2 gap-4 '>
 					<div className='space-y-2'>
 						<Input
 							id='first-name'
 							placeholder='Enter your first name'
-							inputLabel='First name'
+							// inputLabel='First name'
 						/>
 					</div>
 					<div className='space-y-2'>
 						<Input
 							id='last-name'
 							placeholder='Enter your last name'
-							inputLabel='Last name'
+							// inputLabel='Last name'
 						/>
 					</div>
 				</div>
+				
+					<div className='space-y-2 lg:hidden md:hidden'>
+						<Input
+							id='first-name'
+							placeholder='Enter your first name'
+							// inputLabel='First name'
+						/>
+					</div>
+					<div className='space-y-2'>
+						<Input
+							id='last-name'
+							placeholder='Enter your last name'
+							// inputLabel='Last name'
+						/>
+					</div>
 				<div className='space-y-2'>
 					<Input
 						id='email'
 						placeholder='Enter your email'
 						type='email'
-						inputLabel='Email'
+						// inputLabel='Email'
 					/>
 				</div>
 				<div className='space-y-2'>
@@ -76,7 +91,7 @@ const Contact = () => {
 						id='message'
 						placeholder='Enter your message'
 						rows={6}
-						textAreaLabel='Message'
+						// textAreaLabel='Message'
 					/>
 				</div>
 				<div>

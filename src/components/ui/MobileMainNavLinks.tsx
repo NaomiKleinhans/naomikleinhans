@@ -11,7 +11,7 @@ const MobileMainNavLinks = () => {
 	}
 
 	return (
-		<nav className='fixed p-4 right-0 flex flex-col rounded-lg bg-[#101010] space-y-10 px-10 my-1 mx-2'>
+		<nav className='fixed p-4 right-0 flex flex-col rounded-lg bg-[#010101] space-y-10 px-10 my-1 mx-2 z-50'>
 			<Link href='#projects'>
 				<div
 					className={`text-xl font-medium ${

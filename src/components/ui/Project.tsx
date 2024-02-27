@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import Card from './Card'
+import Link from 'next/link'
 
 
 const Project = () => {
@@ -14,10 +15,10 @@ const Project = () => {
 	}, [])
 
 	return (
-		<div className='container mt-24 px-4 md:px-6'>
+		<div className='container sm:mt-20 md:mt-24 lg:mt-24 px-4 md:px-6'>
 			<div className='flex flex-col items-center justify-center space-y-4 text-center'>
 				<div className='space-y-2'>
-					<h2 className='lg:text-5xl md:text-4xl text-center mx-4 sm:text-3xl font-bold mb-24 text-themeColorMain'>
+					<h2 className='lg:text-5xl md:text-4xl text-center mx-4 sm:text-4xl font-bold mb-10 text-themeColorMain sm:mr-6'>
 						Featured Projects
 					</h2>
 				</div>
@@ -36,8 +37,16 @@ const Project = () => {
 					description='	A description of the first project.'
 				></Card>
 			</div>
-			<div className='text-center text-textColor mt-20'>
-				If my projects catch your eye, reach out! Let us collaborate.
+			<div className='text-center text-themeColorMain mt-14 text-sm'>
+				If my projects catch your eye,
+				<Link
+					href='#contact'
+					className='underline text-textColor mx-2'
+				>
+					reach out!
+				</Link>
+				<br/>
+				<span className=''>Let us collaborate.</span>
 			</div>
 		</div>
 	)

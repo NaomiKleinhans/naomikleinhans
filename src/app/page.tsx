@@ -78,7 +78,7 @@ const Home = () => {
 		<>
 			<header
 				key='1'
-				className='flex flex-col bg-[#181818] overflow-y-hidden'
+				className='flex flex-col overflow-y-hidden'
 			>
 				<MainNav
 					activeSection={activeSection}
@@ -86,16 +86,16 @@ const Home = () => {
 				/>
 				<MobileMainNav />
 			</header>
-			<main className='flex flex-col bg-[#181818] overflow-y-hidden'>
+			<main className='flex flex-col overflow-y-hidden'>
 				{canScrollLeft ? (
-					<div className='w-10 h-10 absolute top-1/2 z-50 cursor-pointer scroll-left animate-pulse'>
+					<div className='w-14 h-14 absolute top-1/2 lg:top-1/2 md:top-1/2 sm:top-24 z-40 cursor-pointer scroll-left'>
 						<ChevronLeftIcon onClick={() => handleScrollButtonClick('left')} />
 					</div>
 				) : (
 					<></>
 				)}
 				{canScrollRight ? (
-					<div className='w-10 h-10 absolute top-1/2 right-0 z-50 cursor-pointer animate-pulse'>
+					<div className='w-14 h-14 absolute lg:top-1/2 md:top-1/2 sm:top-24 right-0 z-40 cursor-pointer '>
 						<ChevronRightIcon
 							onClick={() => handleScrollButtonClick('right')}
 						/>
@@ -107,15 +107,20 @@ const Home = () => {
 				<div
 					className='carousel-container overflow-x-scroll h-content flex no-scrolly'
 					ref={containerRef}
+					style={{
+						backgroundImage: `url('/background1.gif')`,
+						backgroundSize: 'cover',
+						backgroundPosition: 'center'
+					}}
 				>
 					<section
-						className='min-w-full lg:space-y-10 md:space-y-10 sm:space-y-10 bg-[#181818]'
+						className='min-w-full lg:space-y-6 md:space-y-8 sm:space-y-6 '
 						id='home'
 					>
-						<h1 className='mt-24 sm:mb-8 lg:text-5xl md:text-4xl text-center mx-4 sm:text-3xl font-bold text-themeColorMain'>
+						<h1 className='sm:mt-20 md:mt-24 lg:mt-24 sm:mb-6 lg:text-6xl md:text-4xl text-center mx-4 sm:text-4xl font-bold text-themeColorMain sm:mr-10'>
 							Welcome to my Portfolio
 						</h1>
-						<div className='text-center text-textColor lg:text-2xl md:text-xl sm:text-md mx-4'>
+						<div className='text-center text-textColor lg:text-2xl md:text-xl sm:text-md mx-4 sm:pb-6 md:pb-6 lg:pb-6'>
 							I am a frontend developer with a passion for creating beautiful
 							and functional web applications.
 						</div>
@@ -171,37 +176,37 @@ const Home = () => {
 								</div>
 							</div>
 						</div>
-						<div className='text-center text-textColor lg:text-lg md:text-md sm:text-xs'>
-							Explore my{' '}
+						<div className='text-center text-themeColorMain lg:text-lg md:text-md sm:text-xs font-semibold lg:py-16 md:py-12 sm:py-10'>
+							Explore my
 							<Link
 								href='#projects'
-								className='button border-themeColorMain border-2 text-themeColorMain px-2 py-1 font-semibold rounded-md mx-2'
+								className='button underline text-textColor font-semibold rounded-md mx-2'
 							>
 								Projects
 							</Link>{' '}
 						</div>
 					</section>
 					<section
-						className='min-w-full flex justify-center bg-[#181818]'
+						className='min-w-full flex justify-center '
 						id='projects'
 					>
 						<Project />
 					</section>
 					<section
-						className='min-w-full flex justify-center bg-[#181818]'
+						className='min-w-full flex justify-center '
 						id='about'
 					>
 						<About />
 					</section>
 					<section
-						className='min-w-full flex justify-center bg-[#181818]'
+						className='min-w-full flex justify-center '
 						id='contact'
 					>
 						<Contact />
 					</section>
 				</div>
 			</main>
-			<footer className='flex justify-between border-t border-themeColorMain py-3 sm:py-1.5 sm:text-xxs bg-[#181818]'>
+			<footer className='flex justify-between border-t border-themeColorMain py-3 sm:py-2 sm:text-xxs '>
 				<div className='text-themeColorMain justify-start mx-auto'>
 					© 2024 Frontend Developer. All rights reserved.
 				</div>

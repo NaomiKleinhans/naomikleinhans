@@ -15,7 +15,7 @@ const About = () => {
 		<div className='container mt-24 px-4 md:px-6'>
 			<div className='flex flex-col items-center justify-center space-y-4 text-center'>
 				<div className='space-y-2'>
-					<h2 className='lg:text-5xl md:text-4xl text-center mx-4 sm:text-3xl font-bold mb-24 text-themeColorMain'>
+					<h2 className='lg:text-5xl md:text-4xl text-center mx-4 sm:text-4xl font-bold mb-2 text-themeColorMain'>
 						About Me
 					</h2>
 					<div className='text-center text-textColor lg:text-xl md:text-lg sm:text-sm mx-4'>

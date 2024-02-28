@@ -24,7 +24,7 @@ const CVPage = () => {
 	}
 
 	return (
-		<div className='flex justify-center lg:my-10 md:py-8 sm:py-4'>
+		<div className='flex justify-center lg:mt-10 md:pt-8 sm:pt-4'>
 			<Button
 				label='Download CV'
 				onClick={downloadCV}

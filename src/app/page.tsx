@@ -211,10 +211,10 @@ const Home = () => {
 				</div>
 			</main>
 			<footer className='flex justify-between border-t border-themeColorMain py-3 sm:py-2 sm:text-xxs '>
-				<div className='text-themeColorMain justify-start mx-auto'>
+				<div className='text-themeColorMain justify-center mx-auto'>
 					© 2024 Frontend Developer. All rights reserved.
 				</div>
-				<nav className='mx-auto flex gap-4 text-textColor justify-end'>
+				{/* <nav className='mx-auto flex gap-4 text-textColor justify-end'>
 					<Link href='#'>
 						<span className='hover:underline cursor-pointer'>
 							Terms of Service
@@ -223,7 +223,7 @@ const Home = () => {
 					<Link href='#'>
 						<span className='hover:underline cursor-pointer'>Privacy</span>
 					</Link>
-				</nav>
+				</nav> */}
 			</footer>
 		</>
 	)

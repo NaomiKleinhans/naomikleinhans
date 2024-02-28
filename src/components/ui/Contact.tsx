@@ -2,6 +2,10 @@ import React, { useEffect, useRef } from 'react'
 import { Input } from './Input'
 import { Textarea } from './Textarea'
 import { Button } from './Button'
+import { WhatsappIcon } from '../SvgIcons/WhatsappIcon'
+import Link from 'next/link'
+import { LinkedinIcon } from '../SvgIcons/LinkedinIcon'
+import { EmailIcon } from '../SvgIcons/EmailIcon'
 
 const Contact = () => {
 	const containerRef = useRef<HTMLDivElement>(null)
@@ -46,7 +50,7 @@ const Contact = () => {
 					</h2>
 				</div>
 			</div>
-			<div className='text-textColor sm:space-y-2 md:space-y-3 lg:space-y-4'>
+			<div className='text-textColor sm:space-y-2 md:space-y-3 lg:space-y-2'>
 				<div className='sm:hidden grid grid-cols-2 gap-4 '>
 					<div className='sm:space-y-2 md:space-y-3 lg:space-y-4'>
 						<Input
@@ -94,11 +98,41 @@ const Contact = () => {
 						// textAreaLabel='Message'
 					/>
 				</div>
-				<div className='mt-4'>
-					<Button
-						label='Send Message'
-						onClick={handleSendEmail}
-					/>
+				<div className='flex lg:justify-between md:justify-between sm:gap-2'>
+					<div className='sm:mt-4 md:mt-4 lg:mt-0 lg:justify-start md:justify-start'>
+						<Button
+							label='Send Message'
+							onClick={handleSendEmail}
+						/>
+					</div>
+					<div className='flex flex-row card bg-[#181818] lg:p-0 md:p-1 sm:py-0 sm:px-2 sm:mt-4 md:mt-4 lg:mt-0 rounded-lg lg:w-1/4 md:w-1/3 sm:w-1/2 border border-themeColorMain'>
+						<div className='flex items-center lg:space-x-6 md:space-x-6 sm:space-x-2 mx-auto'>
+							<Link href='https://wa.me/message/Q73H3Y7AOX7MK1'>
+								<WhatsappIcon className='sm:hidden w-10 h-10' />
+								<WhatsappIcon className='md:hidden lg:hidden w-7 h-7' />
+							</Link>
+							<Link href='https://linkedin.com/in/naomi-kleinhans-b917271ab'>
+								<LinkedinIcon
+									className='sm:hidden w-10 h-10'
+									style={{ fill: '#5A75CE' }}
+								/>
+								<LinkedinIcon
+									className='md:hidden lg:hidden w-7 h-7'
+									style={{ fill: '#5A75CE' }}
+								/>
+							</Link>
+							<Link href='mailto:naomikleinhans56@gmail.com'>
+								<EmailIcon
+									className='sm:hidden w-14 h-14 mt-4'
+									style={{ fill: '#5A75CE' }}
+								/>
+								<EmailIcon
+									className='md:hidden lg:hidden w-11 h-11 mt-4'
+									style={{ fill: '#5A75CE' }}
+								/>
+							</Link>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

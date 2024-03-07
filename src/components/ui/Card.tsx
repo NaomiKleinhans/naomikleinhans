@@ -35,8 +35,16 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
 			setIsHovered(false)
 		}
 
-		const handleClick = () => {
+		const handleCardClick = () => {
 			setIsFlipped(!isFlipped)
+		}
+
+		const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+			event.stopPropagation()
+		}
+
+		const openLinkInNewTab = (link: string) => {
+			window.open(link, '_blank')
 		}
 
 		return (
@@ -44,12 +52,15 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
 				ref={ref}
 				className={`card bg-themeColorMain rounded-lg p-3 sm:h-20 md:h-40 lg:h-60 cursor-pointer ${className}`}
 				{...props}
-				onClick={handleClick}
+				onClick={handleCardClick}
 			>
-				<button className='bg-textColor text-black float-right h-8 -mt-2 text-center rounded-full px-2 py-1 m-0.5'>
+				<button className='bg-textColor text-black text-xs float-right h-8 -mt-2 text-center rounded-full px-2 py-1 m-0.5'>
 					{isFlipped ? 'Go back' : 'Image'}
 				</button>
-				<div className={`card-content ${isFlipped ? '' : 'hidden'}`}>
+				<div
+					className={`card-content ${isFlipped ? '' : 'hidden'}`}
+					onClick={(e) => e.stopPropagation()}
+				>
 					{image && (
 						<div
 							className={`image sm:hidden md:hidden ${
@@ -63,7 +74,10 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
 					)}
 				</div>
 
-				<div className={`card-body space-y-4 ${isFlipped ? 'hidden' : ''}`}>
+				<div
+					className={`card-body space-y-4 ${isFlipped ? 'hidden' : ''}`}
+					onClick={handleCardClick}
+				>
 					{title && (
 						<h3
 							className={`card-title text-black font-bold sm:text-md md:text-xl lg:text-3xl`}
@@ -78,33 +92,38 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
 							{description}
 						</div>
 					)}
-					<div className='flex flex-row gap-6 pt-4 justify-center z-50'>
+					<div className='flex flex-row gap-6 mt-4 justify-center'>
 						{liveSiteLink && (
-							<Link
-								href={liveSiteLink}
-								passHref
-							>
-								<Image
-									src='/web.png'
-									alt='Live site link'
-									width='50'
-									height='50'
-								/>
-							</Link>
+							<div onClick={() => openLinkInNewTab(liveSiteLink)}>
+								{/* <Link href={liveSiteLink} passHref> */}
+								<div>
+									<Image
+										src='/web.png'
+										alt='Live site link'
+										width='50'
+										height='50'
+									/>
+								</div>
+								{/* </Link> */}
+							</div>
 						)}
 
 						{githubLink && (
-							<Link
-								href={githubLink}
-								passHref
-							>
-								<Image
-									src='/github.png'
-									alt='Github link'
-									width={50}
-									height={50}
-								/>
-							</Link>
+							<div onClick={() => openLinkInNewTab(githubLink)}>
+								<Link
+									href={githubLink}
+									passHref
+								>
+									<div>
+										<Image
+											src='/github.png'
+											alt='Github link'
+											width={50}
+											height={50}
+										/>
+									</div>
+								</Link>
+							</div>
 						)}
 					</div>
 				</div>

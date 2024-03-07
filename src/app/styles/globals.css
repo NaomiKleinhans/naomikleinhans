@@ -68,3 +68,9 @@ main {
 		width: '100%';
 	}
 }
+/* Add this CSS to your stylesheet */
+.enlarged {
+    width: 100%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    transition: all 0.3s ease; /* Add transition for smooth animation */
+}

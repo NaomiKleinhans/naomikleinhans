@@ -193,8 +193,8 @@ const Home = () => {
 						className='min-w-full flex justify-center '
 						id='projects'
 					>
-						{/* <Project /> */}
-						<ComingSoonPage/>
+						<Project />
+						{/* <ComingSoonPage/> */}
 					</section>
 					<section
 						className='min-w-full flex justify-center '

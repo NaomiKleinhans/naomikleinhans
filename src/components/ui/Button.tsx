@@ -5,23 +5,20 @@ export interface ButtonProps {
 	onClick?: MouseEventHandler<HTMLButtonElement>
 	style?: CSSProperties
 	children?: ReactNode
+	backgroundColor?: string
+	color?: string
 }
 
 export const Button: React.FC<ButtonProps> = ({
 	label,
 	onClick,
-	style,
-	children
+	backgroundColor = '#EBE0BC',
+	color = 'black'
 }) => {
 	return (
 		<button
+			className={`bg-${backgroundColor} text-${color} px-4 py-2 rounded-lg`}
 			onClick={onClick}
-			style={{
-				backgroundColor: '#5A75CE',
-				color: 'black',
-							padding: '10px 20px',
-							borderRadius: '10px'
-						}}
 		>
 			{label ?? 'X'}
 		</button>

@@ -99,9 +99,9 @@ const Contact = () => {
 					/>
 				</div>
 				<div className='flex lg:justify-between md:justify-between sm:gap-2'>
-					<div className='sm:mt-4 md:mt-4 lg:mt-0 lg:justify-start md:justify-start'>
+					<div className='sm:mt-4 md:mt-4 lg:mt-0 lg:justify-start md:justify-start bg-themeColorMain text-[#000] pt-4 rounded-lg'>
 						<Button
-							label='Send Message'
+					label='Send Message'
 							onClick={handleSendEmail}
 						/>
 					</div>

@@ -20,17 +20,17 @@ const About = () => {
 						About Me
 					</h2>
 					<div className='text-center text-textColor lg:text-xl md:text-lg sm:text-sm mx-4'>
-						Hello! I'm a front-end developer passionate about creating immersive
+						Hello! I am a front-end developer passionate about creating immersive
 						digital experiences using HTML, CSS, and JavaScript, particularly
 						with Next.js. I specialize in turning design concepts into
 						functional websites and apps that captivate users. I closely follow
 						design principles to ensure a seamless user experience. Continual
 						learning and staying updated on industry trends are crucial to my
-						approach. Thank you for checking out my portfolio! Let's collaborate
+						approach. Thank you for checking out my portfolio! Let us collaborate
 						and bring innovative ideas to life! Besides front-end development, I
 						have a Bachelor of Science in Botany and Plant Pathology (2020) and
 						an Honours degree in Plant Health Ecology (2021). With a year of
-						internship experience in software development, I'm dedicated to
+						internship experience in software development, I am dedicated to
 						contributing unique solutions in this ever-evolving field.
 					</div>
 				</div>

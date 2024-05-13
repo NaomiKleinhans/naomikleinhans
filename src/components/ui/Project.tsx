@@ -38,6 +38,20 @@ const Project = () => {
 						/>
 					}
 				></Card>
+				<Card
+					title='DASHBOARD'
+					description='A User Dashboard program'
+					liveSiteLink='https://expense-tracker-1zn2.vercel.app/'
+					githubLink='https://github.com/NaomiKleinhans/ExpenseTracker.git'
+					image={
+						<Image
+							src='/project2.png'
+							alt='Project 1'
+							width='500'
+							height='500'
+						/>
+					}
+				></Card>
 				{/* <Card
 					title='Project 1'
 					description='A description of the first project.'

@@ -3,9 +3,9 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "next dev -p 3007",
+		"dev": "next dev -p 3000",
 		"build": "npm run clean && next build",
-		"start": "npm run build && next start -p 3607",
+		"start": "npm run build && next start -p 3600",
 		"clean": "npx rimraf .next",
 		"lint": "next lint"
 	},

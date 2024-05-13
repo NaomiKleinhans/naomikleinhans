@@ -41,8 +41,8 @@ const Project = () => {
 				<Card
 					title='DASHBOARD'
 					description='A User Dashboard program'
-					liveSiteLink='https://expense-tracker-1zn2.vercel.app/'
-					githubLink='https://github.com/NaomiKleinhans/ExpenseTracker.git'
+					liveSiteLink='/src/projects/Userdashboard/pages/index.js'
+					githubLink='https://github.com/NaomiKleinhans/naomikleinhans/tree/main/src/projects/Userdashboard'
 					image={
 						<Image
 							src='/project2.png'

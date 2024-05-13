@@ -23,7 +23,7 @@ const Project = () => {
 					</h2>
 				</div>
 			</div>
-			<div className='grid items-center gap-8 text-black md:grid-cols-2 md:gap-12 lg:grid-cols-3'>
+			<div className='grid overflow-y-scroll items-center gap-8 text-black md:grid-cols-2 md:gap-12 lg:grid-cols-3'>
 				<Card
 					title='SPENDWISE'
 					description='An Expense tracker project that will help to manage your expenses easier.'

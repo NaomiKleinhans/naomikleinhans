@@ -50,7 +50,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
 		return (
 			<div
 				ref={ref}
-				className={`card bg-themeColorMain rounded-lg p-3 sm:h-72 md:h-60 lg:h-60 cursor-pointer ${className}`}
+				className={`card bg-themeColorMain rounded-lg p-3 sm:h-60 md:h-60 lg:h-60 cursor-pointer ${className}`}
 				{...props}
 				onClick={handleCardClick}
 			>

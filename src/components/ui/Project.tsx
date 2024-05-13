@@ -15,15 +15,15 @@ const Project = () => {
 	}, [])
 
 	return (
-		<div className='container sm:mt-20 md:mt-24 lg:mt-24 px-4 md:px-6 md:mx-10 lg:mx-10'>
+		<div className='container px-4 sm:mt-20 md:mt-24 lg:mt-24 md:px-6 md:mx-10 lg:mx-10'>
 			<div className='flex flex-col items-center justify-center space-y-4 text-center '>
 				<div className='space-y-2 '>
-					<h2 className='lg:text-6xl md:text-4xl  text-center mx-4 sm:text-4xl font-bold mb-10 text-themeColorMain sm:mr-6'>
+					<h2 className='mx-4 mb-10 font-bold text-center lg:text-6xl md:text-4xl sm:text-4xl text-themeColorMain sm:mr-6'>
 						My Projects
 					</h2>
 				</div>
 			</div>
-			<div className='grid items-center gap-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3 text-black'>
+			<div className='grid items-center gap-8 text-black md:grid-cols-2 md:gap-12 lg:grid-cols-3'>
 				<Card
 					title='SPENDWISE'
 					description='An Expense tracker project that will help to manage your expenses easier.'
@@ -41,8 +41,8 @@ const Project = () => {
 				<Card
 					title='DASHBOARD'
 					description='A User Dashboard program'
-					liveSiteLink='https://expense-tracker-1zn2.vercel.app/'
-					githubLink='https://github.com/NaomiKleinhans/ExpenseTracker.git'
+					liveSiteLink='https://user-indol.vercel.app/'
+					githubLink='https://github.com/NaomiKleinhans/User'
 					image={
 						<Image
 							src='/project2.png'
@@ -85,7 +85,7 @@ const Project = () => {
 				If my projects catch your eye,
 				<Link
 					href='#contact'
-					className='underline text-textColor mx-2'
+					className='mx-2 underline text-textColor'
 				>
 					reach out!
 				</Link>

@@ -25,7 +25,7 @@ const CVPage = () => {
 
 	return (
 		<div className='flex justify-center'>
-			<div className=' bg-themeColorMain w-1/4 text-center lg:mt-10 md:pt-8 sm:pt-4 rounded-lg'>
+			<div className=' bg-themeColorMain w-1/2 text-center lg:mt-10 md:pt-8 sm:pt-4 rounded-lg'>
 				<Button
 					label='Download CV'
 					onClick={downloadCV}

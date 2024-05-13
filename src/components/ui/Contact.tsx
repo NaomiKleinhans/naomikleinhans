@@ -75,13 +75,13 @@ const Contact = () => {
 						// inputLabel='First name'
 					/>
 				</div>
-				{/* <div className='sm:space-y-2 md:space-y-3 lg:space-y-4'>
+				<div className='sm:space-y-2 md:space-y-3 lg:space-y-4 lg:hidden md:hidden'>
 					<Input
 						id='last-name'
 						placeholder='Enter your last name'
 						// inputLabel='Last name'
 					/>
-				</div> */}
+				</div>
 				<div className='sm:space-y-2 md:space-y-3 lg:space-y-4'>
 					<Input
 						id='email'
